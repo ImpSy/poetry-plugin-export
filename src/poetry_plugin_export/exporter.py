@@ -134,7 +134,7 @@ class Exporter:
             else:
                 line = f"{package.complete_name}=={package.version}"
 
-            if not is_direct_remote_reference and ";" in requirement:
+            if not is_direct_remote_reference and not package.develop and ";" in requirement:
                 markers = requirement.split(";", 1)[1].strip()
                 if markers:
                     line += f" ; {markers}"

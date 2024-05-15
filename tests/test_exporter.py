@@ -1316,7 +1316,7 @@ def test_exporter_can_export_requirements_txt_with_directory_packages_editable(
         content = f.read()
 
     expected = f"""\
--e {fixture_root_uri}/sample_project ; {MARKER_PY}
+-e {fixture_root_uri}/sample_project
 """
 
     assert content == expected
